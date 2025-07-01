@@ -2,7 +2,7 @@ namespace LibraryManagement.Models;
 
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
-using LibraryManagement.interfaces;
+using LibraryManagement.Interfaces;
 
 public class Book : ILibraryItem
 {

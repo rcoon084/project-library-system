@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace LibraryManagement.interfaces;
+namespace LibraryManagement.Interfaces;
 
 public interface ILibraryItem
 {
