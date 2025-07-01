@@ -6,8 +6,8 @@ namespace LibraryManagement.Services;
 
 public class LibraryRepository : ILibraryRepository
 {
-    public List<ILibraryItem> _items { get; set; } = new();
-    public int NextId { get; set; }
+    private List<ILibraryItem> _items { get; set; } = new();
+    private int NextId { get; set; }
     public void AddItem(ILibraryItem item)
     {
         if (item == null)
@@ -31,14 +31,24 @@ public class LibraryRepository : ILibraryRepository
     }
     public List<ILibraryItem> GetAllItems()
     {
-        return _items;
+        if (_items != null)
+        {
+            return _items;
+        }
+        else
+        {
+            return new List<ILibraryItem>();
+        }
+        
     }
-    public void RemoveItem(int id)
+    public bool RemoveItem(int id)
     {
         var toRemove = _items.FirstOrDefault(item => item.Id == id);
         if (toRemove != null)
         {
             _items.Remove(toRemove);
+            return true;
         }
+        return false;
     }
 }

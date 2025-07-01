@@ -5,7 +5,12 @@ namespace LibraryManagement.Services;
 
 public class LibraryService : ILibraryService
 {
-    public required ILibraryRepository Repository;
+    private readonly ILibraryRepository Repository;
+    public LibraryService(ILibraryRepository repository)
+    {
+        Repository = repository;
+    }
+
     public bool CheckOutItem(int id)
     {
         var item = Repository.GetItemById(id);
