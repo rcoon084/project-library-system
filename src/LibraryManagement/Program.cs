@@ -24,6 +24,10 @@ book.DisplayDetails();
 movie.DisplayDetails();
 
 LibraryRepository repository = new LibraryRepository();
+LibraryService service = new LibraryService()
+{
+    Repository = repository
+};
 
 repository.AddItem(movie);
 foreach (ILibraryItem item in repository.GetAllItems())
@@ -39,7 +43,17 @@ foreach (ILibraryItem item in repository.GetAllItems())
     item.DisplayDetails();
     Console.WriteLine("");
 }
+
+service.CheckOutItem(movie.Id);
+
+
+
 repository.GetItemById(movie.Id).DisplayDetails();
+
+service.ReturnItem(movie.Id);
+
+repository.GetItemById(movie.Id).DisplayDetails();
+
 repository.RemoveItem(movie.Id);
 foreach (ILibraryItem item in repository.GetAllItems())
 {
