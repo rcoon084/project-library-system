@@ -1,6 +1,7 @@
+using LibraryManagement.Interfaces;
 namespace LibraryManagement.Models;
 
-public class AudioBook
+public class AudioBook : ILibraryItem
 {
     public required int Id { get; set; }
     public required string Title { get; set; }

@@ -1,5 +1,4 @@
 namespace LibraryManagement.Models;
-
 using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using LibraryManagement.Interfaces;

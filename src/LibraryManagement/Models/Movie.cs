@@ -1,6 +1,7 @@
+using LibraryManagement.Interfaces;
 using LibraryManagement.Models;
 
-public class Movie
+public class Movie : ILibraryItem
 {
     public required int Id { get; set; }
     public required string Title { get; set; }

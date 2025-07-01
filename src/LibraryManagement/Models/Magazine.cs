@@ -1,6 +1,7 @@
+using LibraryManagement.Interfaces;
 namespace LibraryManagement.Models;
 
-public class Magazine
+public class Magazine : ILibraryItem
 {
     public required int Id { get; set; }
     public required string Title { get; set; }
