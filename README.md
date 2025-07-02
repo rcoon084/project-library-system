@@ -6,11 +6,29 @@ A simple yet robust console-based application for managing a collection of libra
 ## 🎇Features
 
   * **Add New Items**: Add new books, movies, magazines, or audiobooks to the library inventory.
+
+    ![Add An Item Gif](assets/AddAnItem.gif)
+
   * **View All Items**: Display a complete, formatted list of all items currently in the library.
+
+    ![View All Items Gif](assets/ViewAllItems.gif)
+
   * **Check Out Items**: Mark an item as unavailable for borrowing.
+
+    ![Check Out Item Gif](assets/CheckOutItem.gif)
+
   * **Return Items**: Mark a checked-out item as available again.
+
+    ![Return an Item Gif](<assets/Return an Item.gif>)
+
   * **Remove Items**: Permanently delete an item from the inventory.
+
+    ![Remove an Item Gif](assets/RemoveAnItem.gif)
+
   * **Interactive Console UI**: A user-friendly, menu-driven interface for easy navigation.
+
+    ![Start Menu](assets/StartMenu.png)
+
 ---
 
 ## 🎇Tech Stack & Architecture
@@ -68,6 +86,9 @@ You will need the [.NET SDK](https://dotnet.microsoft.com/en-us/download) instal
     dotnet run
     ```
     The application menu will appear in your console.
+
+    ![Application in the command line](assets/consoleDotnet.gif)
+    
 
 ---
 
