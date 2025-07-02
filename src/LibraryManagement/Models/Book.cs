@@ -3,6 +3,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Runtime.CompilerServices;
 using LibraryManagement.Interfaces;
 
+/// <summary>
+/// An implementation of ILibraryItem
+/// </summary>
 public class Book : ILibraryItem
 {
     public required int Id { get; set; }

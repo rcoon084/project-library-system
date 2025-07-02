@@ -6,6 +6,10 @@ using System.Collections.Generic;
 
 namespace LibraryManagement.Services;
 
+/// <summary>
+/// General class to manage the printing and reading functions.
+/// Adheres to the SOLID principles
+/// </summary>
 public class LibraryConsoleManager
 {
     private readonly ILibraryRepository repository;
@@ -89,7 +93,7 @@ public class LibraryConsoleManager
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("╔═══════════════════════════════════╗");
-            Console.WriteLine("║   The library is currently empty.   ║");
+            Console.WriteLine("║  The library is currently empty.  ║");
             Console.WriteLine("╚═══════════════════════════════════╝");
             Console.ResetColor();
         }

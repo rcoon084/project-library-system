@@ -1,6 +1,9 @@
 using LibraryManagement.Interfaces;
 using LibraryManagement.Models;
 
+/// <summary>
+/// An implementation of ILibraryItem
+/// </summary>
 public class Movie : ILibraryItem
 {
     public required int Id { get; set; }

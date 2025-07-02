@@ -4,6 +4,10 @@ using LibraryManagement.Models;
 
 namespace LibraryManagement.Services;
 
+/// <summary>
+/// An implementation of ILibraryRepository, used for managing the items in memory.
+/// Adheres to the SOLID principles
+/// </summary>
 public class LibraryRepository : ILibraryRepository
 {
     private List<ILibraryItem> _items { get; set; } = new();
@@ -39,7 +43,7 @@ public class LibraryRepository : ILibraryRepository
         {
             return new List<ILibraryItem>();
         }
-        
+
     }
     public bool RemoveItem(int id)
     {

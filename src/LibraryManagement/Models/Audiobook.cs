@@ -1,6 +1,9 @@
 using LibraryManagement.Interfaces;
 namespace LibraryManagement.Models;
 
+/// <summary>
+/// An implementation of ILibraryItem
+/// </summary>
 public class AudioBook : ILibraryItem
 {
     public required int Id { get; set; }

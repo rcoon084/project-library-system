@@ -1,6 +1,9 @@
 
 namespace LibraryManagement.Interfaces;
 
+///<summary>
+/// Defines the contract for a Library Item.
+/// </summary>
 public interface ILibraryItem
 {
     public int Id { get; set; }

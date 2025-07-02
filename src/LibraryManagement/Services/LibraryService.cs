@@ -3,6 +3,10 @@ using LibraryManagement.Models;
 
 namespace LibraryManagement.Services;
 
+/// <summary>
+/// An implementation of ILibraryService, used for cheking out and returning
+/// Adheres to the SOLID principles
+/// </summary>
 public class LibraryService : ILibraryService
 {
     private readonly ILibraryRepository Repository;
