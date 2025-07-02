@@ -181,8 +181,8 @@ public class LibraryConsoleManager
         Console.WriteLine("   0. Cancel and return to Main Menu");
         Console.Write("\nEnter your choice: ");
 
-        string choice = Console.ReadLine();
-        ILibraryItem newItem = null;
+        string? choice = Console.ReadLine();
+        ILibraryItem? newItem = null;
 
         switch (choice)
         {
@@ -243,7 +243,7 @@ public class LibraryConsoleManager
     }
     private string GetStringInput(string prompt)
     {
-        string input;
+        string? input;
         do
         {
             Console.Write("   " + prompt + " ");

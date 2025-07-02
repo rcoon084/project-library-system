@@ -17,29 +17,37 @@ public class LibraryService : ILibraryService
 
     public bool CheckOutItem(int id)
     {
-        var item = Repository.GetItemById(id);
+        ILibraryItem? item = Repository.GetItemById(id);
+        if (item != null)
+        {
+            if (item.IsAvailable == true)
+            {
+                item.IsAvailable = false;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
 
-        if (item.IsAvailable == true)
-        {
-            item.IsAvailable = false;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
     }
     public bool ReturnItem(int id)
     {
-        var item = Repository.GetItemById(id);
-        if (item.IsAvailable == false)
+        ILibraryItem? item = Repository.GetItemById(id);
+        if (item != null)
         {
-            item.IsAvailable = true;
-            return true;
+            if (item.IsAvailable == false)
+            {
+                item.IsAvailable = true;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }

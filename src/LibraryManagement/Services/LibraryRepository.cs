@@ -22,7 +22,7 @@ public class LibraryRepository : ILibraryRepository
         NextId++;
         _items.Add(item);
     }
-    public ILibraryItem GetItemById(int id)
+    public ILibraryItem? GetItemById(int id)
     {
         foreach (ILibraryItem item in _items)
         {
